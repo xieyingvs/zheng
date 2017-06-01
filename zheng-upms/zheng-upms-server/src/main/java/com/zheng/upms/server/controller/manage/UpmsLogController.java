@@ -52,6 +52,8 @@ public class UpmsLogController extends BaseController {
             @RequestParam(required = false, value = "sort") String sort,
             @RequestParam(required = false, value = "order") String order) {
         UpmsLogExample upmsLogExample = new UpmsLogExample();
+        upmsLogExample.setOffset(offset);
+        upmsLogExample.setLimit(limit);
         if (!StringUtils.isBlank(sort) && !StringUtils.isBlank(order)) {
             upmsLogExample.setOrderByClause(sort + " " + order);
         }
@@ -59,7 +61,7 @@ public class UpmsLogController extends BaseController {
             upmsLogExample.or()
                     .andDescriptionLike("%" + search + "%");
         }
-        List<UpmsLog> rows = upmsLogService.selectByExampleForOffsetPage(upmsLogExample, offset, limit);
+        List<UpmsLog> rows = upmsLogService.selectByExample(upmsLogExample);
         long total = upmsLogService.countByExample(upmsLogExample);
         Map<String, Object> result = new HashMap<>();
         result.put("rows", rows);

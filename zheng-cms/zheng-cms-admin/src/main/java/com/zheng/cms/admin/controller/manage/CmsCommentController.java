@@ -52,10 +52,12 @@ public class CmsCommentController extends BaseController {
 			@RequestParam(required = false, value = "sort") String sort,
 			@RequestParam(required = false, value = "order") String order) {
 		CmsCommentExample cmsCommentExample = new CmsCommentExample();
+		cmsCommentExample.setOffset(offset);
+		cmsCommentExample.setLimit(limit);
 		if (!StringUtils.isBlank(sort) && !StringUtils.isBlank(order)) {
 			cmsCommentExample.setOrderByClause(sort + " " + order);
 		}
-		List<CmsComment> rows = cmsCommentService.selectByExampleWithBLOBsForOffsetPage(cmsCommentExample, offset, limit);
+		List<CmsComment> rows = cmsCommentService.selectByExampleWithBLOBs(cmsCommentExample);
 		long total = cmsCommentService.countByExample(cmsCommentExample);
 		Map<String, Object> result = new HashMap<>();
 		result.put("rows", rows);

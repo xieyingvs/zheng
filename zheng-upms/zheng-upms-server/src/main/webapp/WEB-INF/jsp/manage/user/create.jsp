@@ -96,7 +96,7 @@ function createSubmit() {
 							animation: 'rotateX',
 							closeAnimation: 'rotateX',
 							title: false,
-							content: result.data.errorMsg || result.data,
+							content: result.data.errorMsg,
 							buttons: {
 								confirm: {
 									text: '确认',

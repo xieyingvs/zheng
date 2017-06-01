@@ -1,1 +1,1 @@
-start ngrok/ngrok -config=ngrok/ngrok.cfg -subdomain shuzheng 7771
+start ngrok/ngrok -config=ngrok/ngrok.cfg -subdomain shuzheng 80

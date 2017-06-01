@@ -10,12 +10,4 @@ import com.zheng.upms.dao.model.UpmsUserRoleExample;
 */
 public interface UpmsUserRoleService extends BaseService<UpmsUserRole, UpmsUserRoleExample> {
 
-    /**
-     * 用户角色
-     * @param roleIds 角色ids
-     * @param id 用户id
-     * @return
-     */
-    int role(String[] roleIds, int id);
-
 }

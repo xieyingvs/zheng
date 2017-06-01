@@ -56,10 +56,12 @@ public class CmsTagController extends BaseController {
 			@RequestParam(required = false, value = "sort") String sort,
 			@RequestParam(required = false, value = "order") String order) {
 		CmsTagExample cmsTagExample = new CmsTagExample();
+		cmsTagExample.setOffset(offset);
+		cmsTagExample.setLimit(limit);
 		if (!StringUtils.isBlank(sort) && !StringUtils.isBlank(order)) {
 			cmsTagExample.setOrderByClause(sort + " " + order);
 		}
-		List<CmsTag> rows = cmsTagService.selectByExampleForOffsetPage(cmsTagExample, offset, limit);
+		List<CmsTag> rows = cmsTagService.selectByExample(cmsTagExample);
 		long total = cmsTagService.countByExample(cmsTagExample);
 		Map<String, Object> result = new HashMap<>();
 		result.put("rows", rows);

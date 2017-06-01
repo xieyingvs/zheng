@@ -27,16 +27,8 @@ public class UpmsUserServiceImpl extends BaseServiceImpl<UpmsUserMapper, UpmsUse
     UpmsUserMapper upmsUserMapper;
 
     @Override
-    public UpmsUser createUser(UpmsUser upmsUser) {
-        UpmsUserExample upmsUserExample = new UpmsUserExample();
-        upmsUserExample.createCriteria()
-                .andUsernameEqualTo(upmsUser.getUsername());
-        long count = upmsUserMapper.countByExample(upmsUserExample);
-        if (count > 0) {
-            return null;
-        }
+    public UpmsUser insert2(UpmsUser upmsUser) {
         upmsUserMapper.insert(upmsUser);
         return upmsUser;
     }
-
 }

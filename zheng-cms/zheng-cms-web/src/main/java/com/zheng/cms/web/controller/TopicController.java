@@ -39,7 +39,9 @@ public class TopicController extends BaseController {
         // 专题列表
         int rows = 10;
         CmsTopicExample cmsTopicExample = new CmsTopicExample();
-        List<CmsTopic> topics = cmsTopicService.selectByExampleForOffsetPage(cmsTopicExample, (page - 1) * rows, rows);
+        cmsTopicExample.setOffset((page - 1) * rows);
+        cmsTopicExample.setLimit(rows);
+        List<CmsTopic> topics = cmsTopicService.selectByExample(cmsTopicExample);
         model.addAttribute("topics", topics);
         // 文章总数
         long total = cmsTopicService.countByExample(cmsTopicExample);

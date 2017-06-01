@@ -62,10 +62,12 @@ public class CmsArticleController extends BaseController {
 			@RequestParam(required = false, value = "sort") String sort,
 			@RequestParam(required = false, value = "order") String order) {
 		CmsArticleExample cmsArticleExample = new CmsArticleExample();
+		cmsArticleExample.setOffset(offset);
+		cmsArticleExample.setLimit(limit);
 		if (!StringUtils.isBlank(sort) && !StringUtils.isBlank(order)) {
 			cmsArticleExample.setOrderByClause(sort + " " + order);
 		}
-		List<CmsArticle> rows = cmsArticleService.selectByExampleForOffsetPage(cmsArticleExample, offset, limit);
+		List<CmsArticle> rows = cmsArticleService.selectByExample(cmsArticleExample);
 		long total = cmsArticleService.countByExample(cmsArticleExample);
 		Map<String, Object> result = new HashMap<>();
 		result.put("rows", rows);

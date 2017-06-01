@@ -56,10 +56,12 @@ public class CmsTopicController extends BaseController {
 			@RequestParam(required = false, value = "sort") String sort,
 			@RequestParam(required = false, value = "order") String order) {
 		CmsTopicExample cmsTopicExample = new CmsTopicExample();
+		cmsTopicExample.setOffset(offset);
+		cmsTopicExample.setLimit(limit);
 		if (!StringUtils.isBlank(sort) && !StringUtils.isBlank(order)) {
 			cmsTopicExample.setOrderByClause(sort + " " + order);
 		}
-		List<CmsTopic> rows = cmsTopicService.selectByExampleForOffsetPage(cmsTopicExample, offset, limit);
+		List<CmsTopic> rows = cmsTopicService.selectByExample(cmsTopicExample);
 		long total = cmsTopicService.countByExample(cmsTopicExample);
 		Map<String, Object> result = new HashMap<>();
 		result.put("rows", rows);
