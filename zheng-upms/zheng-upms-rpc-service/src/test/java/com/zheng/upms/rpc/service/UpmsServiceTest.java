@@ -1,6 +1,6 @@
 package com.zheng.upms.rpc.service;
 
-import com.zheng.upms.dao.mapper.UpmsUserMapper;
+import com.zheng.upms.dao.UpmsUserMapper;
 import com.zheng.upms.dao.model.*;
 import com.zheng.upms.rpc.api.UpmsPermissionService;
 import com.zheng.upms.rpc.api.UpmsSystemService;

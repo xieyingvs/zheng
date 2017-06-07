@@ -10,6 +10,18 @@
         <dependent-module archiveName="zheng-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-common/zheng-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="zheng-upms-rpc-api-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-rpc-api/zheng-upms-rpc-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zheng-upms-rpc-service-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-rpc-service/zheng-upms-rpc-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zheng-upms-dao-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-dao/zheng-upms-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zheng-upms-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-common/zheng-upms-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="zheng-admin-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-admin/zheng-admin">
             <dependency-type>uses</dependency-type>
         </dependent-module>

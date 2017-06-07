@@ -2,7 +2,7 @@ package com.zheng.upms.rpc.service.impl;
 
 import com.zheng.common.annotation.BaseService;
 import com.zheng.common.base.BaseServiceImpl;
-import com.zheng.upms.dao.mapper.UpmsUserMapper;
+import com.zheng.upms.dao.UpmsUserMapper;
 import com.zheng.upms.dao.model.UpmsUser;
 import com.zheng.upms.dao.model.UpmsUserExample;
 import com.zheng.upms.rpc.api.UpmsUserService;

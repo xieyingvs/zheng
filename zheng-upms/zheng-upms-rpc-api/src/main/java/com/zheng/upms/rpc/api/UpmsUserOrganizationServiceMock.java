@@ -1,7 +1,7 @@
 package com.zheng.upms.rpc.api;
 
 import com.zheng.common.base.BaseServiceMock;
-import com.zheng.upms.dao.mapper.UpmsUserOrganizationMapper;
+import com.zheng.upms.dao.UpmsUserOrganizationMapper;
 import com.zheng.upms.dao.model.UpmsUserOrganization;
 import com.zheng.upms.dao.model.UpmsUserOrganizationExample;
 import org.slf4j.Logger;

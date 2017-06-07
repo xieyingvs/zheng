@@ -1,7 +1,7 @@
 package com.zheng.upms.rpc.api;
 
 import com.zheng.common.base.BaseServiceMock;
-import com.zheng.upms.dao.mapper.UpmsUserMapper;
+import com.zheng.upms.dao.UpmsUserMapper;
 import com.zheng.upms.dao.model.UpmsUser;
 import com.zheng.upms.dao.model.UpmsUserExample;
 

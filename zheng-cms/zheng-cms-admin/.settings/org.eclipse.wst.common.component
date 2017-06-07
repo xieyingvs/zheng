@@ -22,6 +22,15 @@
         <dependent-module archiveName="zheng-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-common/zheng-common">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="zheng-upms-rpc-api-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-rpc-api/zheng-upms-rpc-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zheng-upms-dao-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-dao/zheng-upms-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zheng-upms-common-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zheng-upms-common/zheng-upms-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="zheng-cms-admin"/>
         <property name="java-output-path" value="/zheng-cms-admin/target/classes"/>
     </wb-module>

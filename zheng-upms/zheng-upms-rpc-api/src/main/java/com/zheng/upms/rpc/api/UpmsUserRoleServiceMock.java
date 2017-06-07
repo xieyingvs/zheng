@@ -1,7 +1,7 @@
 package com.zheng.upms.rpc.api;
 
 import com.zheng.common.base.BaseServiceMock;
-import com.zheng.upms.dao.mapper.UpmsUserRoleMapper;
+import com.zheng.upms.dao.UpmsUserRoleMapper;
 import com.zheng.upms.dao.model.UpmsUserRole;
 import com.zheng.upms.dao.model.UpmsUserRoleExample;
 import org.slf4j.Logger;

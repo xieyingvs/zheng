@@ -2,7 +2,7 @@ package com.zheng.upms.rpc.api;
 
 import com.alibaba.fastjson.JSONArray;
 import com.zheng.common.base.BaseServiceMock;
-import com.zheng.upms.dao.mapper.UpmsPermissionMapper;
+import com.zheng.upms.dao.UpmsPermissionMapper;
 import com.zheng.upms.dao.model.UpmsPermission;
 import com.zheng.upms.dao.model.UpmsPermissionExample;
 import org.slf4j.Logger;

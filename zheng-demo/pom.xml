@@ -22,5 +22,7 @@
         <module>zheng-demo-rpc-api</module>
         <module>zheng-demo-rpc-service</module>
         <module>zheng-demo-web</module>
+        <module>zheng-upms-rpc-service</module>
+        <module>zheng-upms-rpc-api</module>
     </modules>
 </project>

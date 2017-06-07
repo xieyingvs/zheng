@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zheng.common.annotation.BaseService;
 import com.zheng.common.base.BaseServiceImpl;
-import com.zheng.upms.dao.mapper.UpmsUserPermissionMapper;
+import com.zheng.upms.dao.UpmsUserPermissionMapper;
 import com.zheng.upms.dao.model.UpmsUserPermission;
 import com.zheng.upms.dao.model.UpmsUserPermissionExample;
 import com.zheng.upms.rpc.api.UpmsUserPermissionService;

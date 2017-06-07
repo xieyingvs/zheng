@@ -23,7 +23,6 @@
             <groupId>com.zheng</groupId>
             <artifactId>zheng-upms-dao</artifactId>
             <version>1.0.0</version>
-            <type>jar</type>
         </dependency>
     </dependencies>
 
